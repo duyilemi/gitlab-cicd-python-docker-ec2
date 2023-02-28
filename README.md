@@ -12,9 +12,6 @@ Typical uses would be deployment to Kubernetes, demos of Docker, CI/CD (build pi
 
 Live instances:
 
-[![](https://img.shields.io/website?label=Hosted%3A%20Azure%20App%20Service&up_message=online&url=https%3A%2F%2Fpython-demoapp.azurewebsites.net%2F)](https://python-demoapp.azurewebsites.net/)  
-[![](https://img.shields.io/website?label=Hosted%3A%20Kubernetes&up_message=online&url=https%3A%2F%2Fpython-demoapp.kube.benco.io%2F)](https://python-demoapp.kube.benco.io/)
-
 ## Building & Running Locally
 
 ### Pre-reqs
