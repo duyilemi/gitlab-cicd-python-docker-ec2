@@ -6,10 +6,6 @@ The app has been designed with cloud native demos & containers in mind, in order
 
 Typical uses would be deployment to Kubernetes, demos of Docker, CI/CD (build pipelines are provided), deployment to cloud (Azure) monitoring, auto-scaling
 
-## Screenshot
-
-![screen](https://user-images.githubusercontent.com/14982936/30533171-db17fccc-9c4f-11e7-8862-eb8c148fedea.png)
-
 # Status
 
 ![](https://img.shields.io/github/last-commit/duyilemi/gitlab-cicd-python-docker-ec2) ![](https://img.shields.io/github/release-date/duyilemi/gitlab-cicd-python-docker-ec2) ![](https://img.shields.io/github/v/release/duyilemi/gitlab-cicd-python-docker-ec2) ![](https://img.shields.io/github/commit-activity/y/duyilemi/gitlab-cicd-python-docker-ec2)
@@ -26,7 +22,7 @@ Live instances:
 - Be using Linux, WSL or MacOS, with bash, make etc
 - [Python 3.8+](https://www.python.org/downloads/) - for running locally, linting, running tests etc
 - [Docker](https://docs.docker.com/get-docker/) - for running as a container, or image build and push
-- [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-linux) - for deployment to Azure
+- [AWS](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-linux) - for deployment to AWs EC2
 
 Clone the project to any directory where you do development work
 
@@ -53,18 +49,7 @@ test-api             🚦 Run integration API tests, server must be running
 clean                🧹 Clean up project
 ```
 
-Make file variables and default values, pass these in when calling `make`, e.g. `make image IMAGE_REPO=blah/foo`
-
-| Makefile Variable | Default                |
-| ----------------- | ---------------------- |
-| IMAGE_REG         | ghcr<span>.</span>io   |
-| IMAGE_REPO        | benc-uk/python-demoapp |
-| IMAGE_TAG         | latest                 |
-| AZURE_RES_GROUP   | temp-demoapps          |
-| AZURE_REGION      | uksouth                |
-| AZURE_SITE_NAME   | pythonapp-{git-sha}    |
-
-The app runs under Flask and listens on port 5000 by default, this can be changed with the `PORT` environmental variable.
+The app runs under Flask and listens on port 3000 by default, this can be changed with the `PORT` environmental variable.
 
 # Containers
 
@@ -78,7 +63,7 @@ Should you want to build your own container, use `make image` and the above vari
 
 ## Kubernetes
 
-The app can easily be deployed to Kubernetes using Helm, see [deploy/kubernetes/readme.md](deploy/kubernetes/readme.md) for details
+The app can easily be deployed to Kubernetes using Helm
 
 # GitHub Actions CI/CD
 
@@ -93,17 +78,3 @@ A working set of CI and CD release GitHub Actions workflows are provided `.githu
 [![](https://img.shields.io/github/workflow/status/duyilemi/gitlab-cicd-python-docker-ec2/CD%20Release%20-%20Webapp?label=release-azure)](https://github.com/duyilemi/gitlab-cicd-python-docker-ec2/actions?query=workflow%3A%22CD+Release+-+Webapp%22)
 
 [![](https://img.shields.io/github.com/duyilemi/gitlab-cicd-python-docker-ec2)](https://github.com/duyilemi/gitlab-cicd-python-docker-ec2/commits/master)
-
-## Running in Azure App Service (Linux)
-
-If you want to deploy to an Azure Web App as a container (aka Linux Web App), a Bicep template is provided in the [deploy](deploy/) directory
-
-For a super quick deployment, use `make deploy` which will deploy to a resource group, temp-demoapps and use the git ref to create a unique site name
-
-```bash
-make deploy
-```
-
-## Running in Azure App Service (Windows)
-
-Just don't, it's awful
