@@ -10,7 +10,9 @@ Typical uses would be deployment to Kubernetes, demos of Docker, CI/CD (build pi
 
 ![](https://img.shields.io/github/last-commit/duyilemi/gitlab-cicd-python-docker-ec2) ![](https://img.shields.io/github/release-date/duyilemi/gitlab-cicd-python-docker-ec2) ![](https://img.shields.io/github/v/release/duyilemi/gitlab-cicd-python-docker-ec2) ![](https://img.shields.io/github/commit-activity/y/duyilemi/gitlab-cicd-python-docker-ec2)
 
-Live instances:
+## Live instances:
+
+# http://44.192.59.188:3000/
 
 ## Building & Running Locally
 
