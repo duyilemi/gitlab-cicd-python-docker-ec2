@@ -86,7 +86,7 @@ A working set of CI and CD release GitHub Actions workflows are provided `.githu
 
 ### [GitHub Actions](https://github.com/duyilemi/gitlab-cicd-python-docker-ec2/actions)
 
-[![](https://img.shields.io/github/workflow/status/duyilemi/gitlab-cicd-python-docker-ec2/CI%20Build%20App)](https://github.com/benc-uk/python-demoapp/actions?query=workflow%3A%22CI+Build+App%22)
+[![](https://img.shields.io/github/workflow/status/duyilemi/gitlab-cicd-python-docker-ec2/CI%20Build%20App)](https://github.com/duyilemi/gitlab-cicd-python-docker-ec2/actions?query=workflow%3A%22CI+Build+App%22)
 
 [![](https://img.shields.io/github/workflow/status/duyilemi/gitlab-cicd-python-docker-ec2/CD%20Release%20-%20AKS?label=release-kubernetes)](https://github.com/duyilemi/gitlab-cicd-python-docker-ec2/actions?query=workflow%3A%22CD+Release+-+AKS%22)
 
