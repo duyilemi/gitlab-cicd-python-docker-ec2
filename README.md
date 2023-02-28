@@ -12,7 +12,7 @@ Typical uses would be deployment to Kubernetes, demos of Docker, CI/CD (build pi
 
 # Status
 
-![](https://img.shields.io/github/last-commit/benc-uk/python-demoapp) ![](https://img.shields.io/github/release-date/benc-uk/python-demoapp) ![](https://img.shields.io/github/v/release/benc-uk/python-demoapp) ![](https://img.shields.io/github/commit-activity/y/benc-uk/python-demoapp)
+![](https://img.shields.io/github/last-commit/duyilemi/gitlab-cicd-python-docker-ec2) ![](https://img.shields.io/github/release-date/duyilemi/gitlab-cicd-python-docker-ec2) ![](https://img.shields.io/github/v/release/duyilemi/gitlab-cicd-python-docker-ec2) ![](https://img.shields.io/github/commit-activity/y/duyilemi/gitlab-cicd-python-docker-ec2)
 
 Live instances:
 
@@ -31,7 +31,7 @@ Live instances:
 Clone the project to any directory where you do development work
 
 ```
-git clone https://github.com/benc-uk/python-demoapp.git
+git clone https://github.com/duyilemi/gitlab-cicd-python-docker-ec2
 ```
 
 ### Makefile
@@ -68,12 +68,10 @@ The app runs under Flask and listens on port 5000 by default, this can be change
 
 # Containers
 
-Public container image is [available on GitHub Container Registry](https://github.com/users/benc-uk/packages/container/package/python-demoapp)
-
 Run in a container with:
 
 ```bash
-docker run --rm -it -p 5000:5000 ghcr.io/benc-uk/python-demoapp:latest
+docker run --rm -it -p 3000:3000 charlied0cker/python-cicd-demo:latest
 ```
 
 Should you want to build your own container, use `make image` and the above variables to customise the name & tag.
@@ -86,15 +84,15 @@ The app can easily be deployed to Kubernetes using Helm, see [deploy/kubernetes/
 
 A working set of CI and CD release GitHub Actions workflows are provided `.github/workflows/`, automated builds are run in GitHub hosted runners
 
-### [GitHub Actions](https://github.com/benc-uk/python-demoapp/actions)
+### [GitHub Actions](https://github.com/duyilemi/gitlab-cicd-python-docker-ec2/actions)
 
-[![](https://img.shields.io/github/workflow/status/benc-uk/python-demoapp/CI%20Build%20App)](https://github.com/benc-uk/python-demoapp/actions?query=workflow%3A%22CI+Build+App%22)
+[![](https://img.shields.io/github/workflow/status/duyilemi/gitlab-cicd-python-docker-ec2/CI%20Build%20App)](https://github.com/benc-uk/python-demoapp/actions?query=workflow%3A%22CI+Build+App%22)
 
-[![](https://img.shields.io/github/workflow/status/benc-uk/python-demoapp/CD%20Release%20-%20AKS?label=release-kubernetes)](https://github.com/benc-uk/python-demoapp/actions?query=workflow%3A%22CD+Release+-+AKS%22)
+[![](https://img.shields.io/github/workflow/status/duyilemi/gitlab-cicd-python-docker-ec2/CD%20Release%20-%20AKS?label=release-kubernetes)](https://github.com/duyilemi/gitlab-cicd-python-docker-ec2/actions?query=workflow%3A%22CD+Release+-+AKS%22)
 
-[![](https://img.shields.io/github/workflow/status/benc-uk/python-demoapp/CD%20Release%20-%20Webapp?label=release-azure)](https://github.com/benc-uk/python-demoapp/actions?query=workflow%3A%22CD+Release+-+Webapp%22)
+[![](https://img.shields.io/github/workflow/status/duyilemi/gitlab-cicd-python-docker-ec2/CD%20Release%20-%20Webapp?label=release-azure)](https://github.com/duyilemi/gitlab-cicd-python-docker-ec2/actions?query=workflow%3A%22CD+Release+-+Webapp%22)
 
-[![](https://img.shields.io/github/last-commit/benc-uk/python-demoapp)](https://github.com/benc-uk/python-demoapp/commits/master)
+[![](https://img.shields.io/github.com/duyilemi/gitlab-cicd-python-docker-ec2)](https://github.com/duyilemi/gitlab-cicd-python-docker-ec2/commits/master)
 
 ## Running in Azure App Service (Linux)
 
@@ -108,4 +106,4 @@ make deploy
 
 ## Running in Azure App Service (Windows)
 
-Just don't, it's awful 
+Just don't, it's awful
